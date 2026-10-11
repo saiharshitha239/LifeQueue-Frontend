@@ -3,7 +3,7 @@ import { useState } from "react";
 import axios from "axios";
 import "./App.css";
 
-const API = "http://localhost:8080/api";
+const API = import.meta.env.VITE_API_URL || "http://localhost:8080/api";
 
 function App() {
   const [page, setPage] = useState("login");
